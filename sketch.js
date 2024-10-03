@@ -28,20 +28,9 @@ function setup() {
 function draw() {
   background(125);
 }
-/*
- // Toggle looping for carstart with key '1'
- if (key == '1') {
-  if (isCarStartLooping) {
-    carstart.stop();
-    isCarStartLooping = false;
-  } else {
-    carstart.loop();
-    isCarStartLooping = true;
-  }
-}
-*/
 
-//Holding '+' makes the horn sound loop
+
+//Holding '+' makes the horn sound loop but we'll change that to radio when we get the sound 
 function keyPressed() {
   if (key == '+') {
     if (isHornLooping) {
