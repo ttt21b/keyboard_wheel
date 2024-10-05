@@ -5,14 +5,17 @@ let breaking;
 let bear;
 let leaves;
 let crash;
+let carengine;
 
 
 let isHornLooping = false;
 let isCarStartLooping = false;
+let isCarEngineLooping = false;
 
 function preload (){
   horn = loadSound("assets/horn.mp3");
-  carstart = loadSound("assets/carstart.mp3");
+  carengine = loadSound("assets/carenginehum.mp3")
+  carstart = loadSound("assets/carstartup.mp3");
   // radio = loadSound();
   breaking = loadSound("assets/breaking.mp3");
   bear = loadSound("assets/bear.mp3");
@@ -47,11 +50,27 @@ function keyPressed() {
       horn.play();
     }
   }
+
+  // i made it so that carstart is just the key and engine turning on -tien
   if (key == '2') {
-    if(!key.isPlaying()){
+    if(!carstart.isPlaying()){
       carstart.play()
     }
   }
+ 
+// this is the car engine hum so its not just quiet after the engine start - tien
+  if (key == 'w') {
+    if (isCarEngineLooping) {
+      carengine.stop();
+      isCarEngineLooping = false;
+       } else {
+        carengine.loop();
+        isCarEngineLooping = true;
+        }
+} 
+
+
+  
   if (key == '5') {
     if(!breaking.isPlaying()){
       breaking.play()
