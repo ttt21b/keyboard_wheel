@@ -7,6 +7,7 @@ let leaves;
 let crash;
 let carengine;
 let tensemusic;
+let radiostatic; //this is the static that plays when you change radio stations
 
 let isHornLooping = false;
 let isCarStartLooping = false;
@@ -25,6 +26,7 @@ function preload (){
   leaves = loadSound("assets/leaves.mp3");
   crash = loadSound("assets/crash.mp3");
   tensemusic = loadSound("assets/tensemusic.mp3")
+  radiostatic =loadSound("assets/radiotuningsound.mp3")
 
 }
 
