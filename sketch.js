@@ -20,7 +20,9 @@ function preload (){
   horn = loadSound("assets/horn.mp3");
   carengine = loadSound("assets/realcarenginehum.mp3")
   carstart = loadSound("assets/carstartup.mp3");
-  // radio = loadSound();
+  // calmmusic = loadSound();
+  // winterbells = loadSound();
+  // 
   breaking = loadSound("assets/breaking.mp3");
   bear = loadSound("assets/bear.mp3");
   leaves = loadSound("assets/leaves.mp3");
