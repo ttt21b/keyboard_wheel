@@ -6,7 +6,7 @@ let bear;
 let leaves;
 let crash;
 let carengine;
-
+let tensemusic;
 
 let isHornLooping = false;
 let isCarStartLooping = false;
@@ -24,6 +24,8 @@ function preload (){
   bear = loadSound("assets/bear.mp3");
   leaves = loadSound("assets/leaves.mp3");
   crash = loadSound("assets/crash.mp3");
+  tensemusic = loadSound("assets/tensemusic.mp3")
+
 }
 
 function setup() {
@@ -92,6 +94,11 @@ function keyPressed() {
   if (key == '9') {
     if(!crash.isPlaying()){
       crash.play()
+    }
+  }
+  if (key == 'm') {
+    if(!tensemusic.isPlaying()){
+      tensemusic.play()
     }
   }
 }
