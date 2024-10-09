@@ -12,9 +12,12 @@ let isHornLooping = false;
 let isCarStartLooping = false;
 let isCarEngineLooping = false;
 
+let loopStart = 0.5;
+let loopDuration = 0.2;
+
 function preload (){
   horn = loadSound("assets/horn.mp3");
-  carengine = loadSound("assets/carenginehum.mp3")
+  carengine = loadSound("assets/realcarenginehum.mp3")
   carstart = loadSound("assets/carstartup.mp3");
   // radio = loadSound();
   breaking = loadSound("assets/breaking.mp3");
