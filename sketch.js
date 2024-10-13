@@ -8,13 +8,15 @@ let crash;
 let carengine;
 let tensemusic;
 let radiostatic; //this is the static that plays when you change radio stations
+let track1;
+let track2;
+let track3;
 
 let isHornLooping = false;
 let isCarStartLooping = false;
 let isCarEngineLooping = false;
 
-let loopStart = 0.5;
-let loopDuration = 0.2;
+
 
 function preload (){
   horn = loadSound("assets/horn.mp3");
@@ -28,7 +30,10 @@ function preload (){
   leaves = loadSound("assets/leaves.mp3");
   crash = loadSound("assets/crash.mp3");
   tensemusic = loadSound("assets/tensemusic.mp3")
-  radiostatic =loadSound("assets/radiotuningsound.mp3")
+  radiostatic = loadSound("assets/radiotuningsound.mp3")
+  track1 = loadSound("assets/outofmyleague.mp3")
+  track2 = loadSound("assets/aline.mp3")
+  track3 = loadSound("assets/goodluckbabe.mp3")
 
 }
 
@@ -103,6 +108,33 @@ function keyPressed() {
   if (key == 'm') {
     if(!tensemusic.isPlaying()){
       tensemusic.play()
+    } else {
+      tensemusic.stop()
+    }
+  }
+
+  // A plays out of my league
+  if ( key == 'A') {
+    if(!track1.isPlaying()){
+      track1.play()
+    } else {
+      track1.stop()
+    }
+  }
+// S plays aline
+  if ( key == 'S') {
+    if(!track2.isPlaying()){
+      track2.play()
+    } else {
+      track2.stop()
+    }
+  }
+  // D plays good luck babe
+if ( key == 'D') {
+    if(!track3.isPlaying()){
+      track3.play()
+    } else {
+      track3.stop()
     }
   }
 }
