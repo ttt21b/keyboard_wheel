@@ -11,6 +11,7 @@ let radiostatic; //this is the static that plays when you change radio stations
 let track1;
 let track2;
 let track3;
+let wintermusic;
 
 let isHornLooping = false;
 let isCarStartLooping = false;
@@ -34,6 +35,7 @@ function preload (){
   track1 = loadSound("assets/outofmyleague.mp3")
   track2 = loadSound("assets/aline.mp3")
   track3 = loadSound("assets/goodluckbabe.mp3")
+  wintermusic = loadSound("assets/wintermusic.mp3")
 
 }
 
@@ -135,6 +137,13 @@ if ( key == 'D') {
       track3.play()
     } else {
       track3.stop()
+    }
+  }
+  if ( key == 'F') {
+    if(!wintermusic.isPlaying()){
+      wintermusic.play()
+    } else {
+      wintermusic.stop()
     }
   }
 }
